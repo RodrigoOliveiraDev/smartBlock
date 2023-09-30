@@ -13,13 +13,22 @@ public class Pessoa {
     private Integer indProfessor;
     private Integer indAdministrador;
 
-    @Transient
-    private Long codCargo;
+
 
     @OneToOne
     @JoinColumn(name="codCargo", unique = true, nullable = false)
     private Cargo cargo;
 
+    public Pessoa(String nome, String cpf, Integer indProfessor, Integer indAdministrador, Cargo cargo) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.indProfessor = indProfessor;
+        this.indAdministrador = indAdministrador;
+        this.cargo = cargo;
+    }
+    public Pessoa() {
+
+    }
     public Integer getCodigo() {
         return codigo;
     }
@@ -66,13 +75,5 @@ public class Pessoa {
 
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
-    }
-
-    public Long getCodCargo() {
-        return codCargo;
-    }
-
-    public void setCodCargo(Long codCargo) {
-        this.codCargo = codCargo;
     }
 }

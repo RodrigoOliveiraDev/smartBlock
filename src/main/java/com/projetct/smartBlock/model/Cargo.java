@@ -3,13 +3,14 @@ package com.projetct.smartBlock.model;
 import jakarta.persistence.*;
 
 
-
 @Entity
-@Table(name="CARGO")
+@Table(name = "CARGO")
 public class Cargo {
 
+    private String role;
+
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer codigo;
     private String descricao;
 
