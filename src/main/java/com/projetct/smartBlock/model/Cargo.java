@@ -7,12 +7,19 @@ import jakarta.persistence.*;
 @Table(name = "CARGO")
 public class Cargo {
 
-    private String role;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer codigo;
     private String descricao;
+
+    public Cargo(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Cargo(){
+
+    }
 
     public Integer getCodigo() {
         return codigo;

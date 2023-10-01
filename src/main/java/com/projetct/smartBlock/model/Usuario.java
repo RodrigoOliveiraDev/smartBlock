@@ -16,7 +16,7 @@ public class Usuario implements UserDetails {
     private Integer codigo;
 
     @OneToOne
-    @JoinColumn (name="codPessoa", unique = true, nullable = false)
+    @JoinColumn (name="codPessoa", nullable = false)
     private Pessoa pessoa;
 
     private String login;

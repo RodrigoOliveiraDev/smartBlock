@@ -16,7 +16,7 @@ public class Pessoa {
 
 
     @OneToOne
-    @JoinColumn(name="codCargo", unique = true, nullable = false)
+    @JoinColumn(name="codCargo",  nullable = false)
     private Cargo cargo;
 
     public Pessoa(String nome, String cpf, Integer indProfessor, Integer indAdministrador, Cargo cargo) {
